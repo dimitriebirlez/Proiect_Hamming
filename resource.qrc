@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>poza.png</file>
+        <file>../../Proiect5/Chestii/bg_final.png</file>
+        <file>bg_final.png</file>
+        <file>bg_final2.png</file>
+        <file>abstract-white-background-geometric-texture-vector-id1069183510.png</file>
+        <file>white-background-diamond-plate.png</file>
+    </qresource>
+</RCC>

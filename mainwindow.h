@@ -2,7 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "afisarenr.h"
+#include "proiectnou.h"
+#include "proiectexistent.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -20,9 +22,11 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void on_pushButton_3_clicked();
+
 private:
     Ui::MainWindow *ui;
-    int z;
-    AfisareNr *afisarenr;
+    ProiectNou *proiectnou;
+    ProiectExistent *proiectexistent;
 };
 #endif // MAINWINDOW_H
