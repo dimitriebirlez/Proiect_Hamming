@@ -95,7 +95,7 @@ QVector <QLabel*>labelrezultatetask[100];
 QVector<QLabel*>labelrezultateind;
 QVector <QLabel*> labeletape;
 void ScriereFisier(){
-    ofstream fout("D:/Facultate/Anul 2/Sem 1/ProiectNOU9/TextEtape.txt");
+    ofstream fout("TextEtape.txt");
     Initializare init;
     for(int i=0;i<init.getNumarInd();i++){
         fout<<init.getInd(i)<<" ";
@@ -173,7 +173,7 @@ for(i=0;i<init.getNumarInd();i++)
     }
     QString dateSpeciala;
     string dataSpeciala222;
-    ifstream fin("C:/Users/user/Desktop/An II ACS/ProiectVar5/ProiectNOU9/DataSpeciala.txt");
+    ifstream fin("DataSpeciala.txt");
        fin>>dataSpeciala222;
     fin.close();
     dateSpeciala=QString::fromStdString(dataSpeciala222);

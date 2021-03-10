@@ -15,7 +15,7 @@ AlegereDate::AlegereDate(QWidget *parent) :
     ui->setupUi(this);
     QDate data=QDate::currentDate();
     ui->dateEdit->setDate(data);
-    ui->label->setText("Introduceti numarul etapei: ");
+    //ui->label->setText("Introduceti data finala pentru etapa 1");
 }
 
 AlegereDate::~AlegereDate()
@@ -30,7 +30,7 @@ void AlegereDate::on_pushButton_clicked()
     date[z]=ui->dateEdit->text();
     date1[z]=date[z].toLocal8Bit().constData();
     QMessageBox::information(this,"Adaugare data","Data cu numarul "+QString::number(z+1)+" a fost adaugata. Selectati in casuta data urmatoare");
-    ui->label->setText("Introduceti data finala pentru etapa "+QString::number(z+1));
+    //ui->label->setText("Introduceti data finala pentru etapa "+QString::number(z+1));
     //ui->dateEdit->);
     if(z<nr_etape-1)
         z++;
@@ -38,7 +38,7 @@ void AlegereDate::on_pushButton_clicked()
         QMessageBox::information(this,"Adaugare data","Au fost introdusa data finala: "+date[z]);
        /* alegeretaskuri=new AlegereTaskuri(this,indicatori1,nr_indicatori);
         alegeretaskuri->show();*/}
-    ofstream datefisier("C:/Users/user/Desktop/An II ACS/ProiectVar4/ProiectNOU4/Date.txt");
+    ofstream datefisier("Date.txt");
     datefisier<<nr_etape<<endl;
     for(int i=0;i<nr_etape;i++)
         datefisier<<date1[i]<<endl;
@@ -52,7 +52,7 @@ void AlegereDate::on_pushButton_2_clicked()
     date=ui->dateEdit->date();
     QString copie=date.toString();
     data=copie.toStdString();
-    ofstream fout("C:/Users/user/Desktop/An II ACS/ProiectVar5/ProiectNOU9/DataParcurs.txt");
+    ofstream fout("DataParcurs.txt");
     fout<<data<<endl;
     fout.close();
     hide();

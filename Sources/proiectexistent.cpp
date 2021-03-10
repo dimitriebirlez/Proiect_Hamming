@@ -15,7 +15,7 @@ ProiectExistent::ProiectExistent(QWidget *parent) :
     ui->dateEdit->setDate(data);
     string nume;
     char name[100];
-    ifstream fin("C:/Users/user/Desktop/An II ACS/ProiectVar5/ProiectNOU9/Nume.txt");
+    ifstream fin("Nume.txt");
       fin.get(name,100,',');
     fin.close();
     for(int i=0;i<strlen(name);i++)
@@ -38,7 +38,7 @@ void ProiectExistent::on_pushButton_clicked()
     QString copie=date.toString("dd-MM-yyyy");
     data=copie.toStdString();
 
-    ofstream fout("C:/Users/user/Desktop/An II ACS/ProiectVar5/ProiectNOU9/DataSpeciala.txt");
+    ofstream fout("DataSpeciala.txt");
     fout<<data;
     fout.close();
     hide();

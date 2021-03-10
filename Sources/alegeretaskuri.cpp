@@ -59,8 +59,8 @@ void AlegereTaskuri::on_pushButton_clicked()
            }
      else if(ind_task>=nr_indicatori-1){
           QMessageBox::information(this,"","Au fost introdusi toate taskurile pentru toti indicatorii");
-          ofstream task("C:/Users/user/Desktop/An II ACS/ProiectVar5/ProiectNOU9/Task.txt");
-          ofstream valori("C:/Users/user/Desktop/An II ACS/ProiectVar5/ProiectNOU9/Valori.txt");
+          ofstream task("Task.txt");
+          ofstream valori("Valori.txt");
           int a,b;
           task<<nr_indicatori<<" ";
           for(a=0;a<nr_indicatori;a++)

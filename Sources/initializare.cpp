@@ -63,20 +63,20 @@ char *Initializare::getDataFinala(){
     return dataFin;
 }
 void Initializare::setDateParcurs(){
-    ifstream datain("C:/Users/user/Desktop/An II ACS/ProiectVar5/ProiectNOU9/DataParcurs.txt");
+    ifstream datain("DataParcurs.txt");
     datain>>dataParcurs;
 
 
     datain.close();
 }
 void Initializare::setData(){
-    ifstream dataIn("C:/Users/user/Desktop/An II ACS/ProiectVar5/ProiectNOU9/DataProiectNou.txt");
+    ifstream dataIn("DataProiectNou.txt");
     dataIn>>dataInit;
     dataIn>>dataFin;
     dataIn.close();
 }
 void Initializare::setIndicatori(){
-    ifstream indicat("C:/Users/user/Desktop/An II ACS/ProiectVar5/ProiectNOU9/Indicatori.txt");
+    ifstream indicat("Indicatori.txt");
     indicat>>NumarInd;
     for(int i=0;i<NumarInd;i++)
         indicat>>Indicatori[i];
@@ -86,7 +86,7 @@ void Initializare::setTask()
 {
     char text[100][100];
     int nr=0;
-    ifstream taskin("C:/Users/user/Desktop/An II ACS/ProiectVar5/ProiectNOU9/Task.txt");
+    ifstream taskin("Task.txt");
     taskin >> NumarInd;
     for (int i = 0; i < NumarInd; i++)
         {
@@ -119,14 +119,14 @@ void Initializare::setTask()
                 }
 }
 void Initializare::setDataEtape(){
-    ifstream datain("C:/Users/user/Desktop/An II ACS/ProiectVar5/ProiectNOU9/Date.txt");
+    ifstream datain("Date.txt");
     datain>>NumarEtap;
     for(int i=0;i<NumarEtap;i++)
             datain>>dataEtapa[i];
     datain.close();
 }
 void Initializare::setValori(){
-    ifstream fin("C:/Users/user/Desktop/An II ACS/ProiectVar5/ProiectNOU9/Valori.txt");
+    ifstream fin("Valori.txt");
     for(int i=0;i<NumarInd;i++)
         for(int j=0;j<NumarTask[i];j++)
             fin>>Valori[i][j];
@@ -140,7 +140,7 @@ void Initializare::setPreluareValori(int a[100][100]){
             if(Valori[i][j]>100)
                 Valori[i][j]=100;
             }
-    ofstream fout("C:/Users/user/Desktop/An II ACS/ProiectVar5/ProiectNOU9/Valori.txt");
+    ofstream fout("Valori.txt");
     for(int i=0;i<NumarInd;i++){
         for(int j=0;j<NumarTask[i];j++)
             fout<<Valori[i][j]<<" ";

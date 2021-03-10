@@ -26,14 +26,14 @@ ProiectNou::~ProiectNou()
 
 void ProiectNou::on_pushButton_clicked()
 {
-    ofstream datainit("C:/Users/user/Desktop/An II ACS/ProiectVar5/ProiectNOU9/DataProiectNou.txt");
+    ofstream datainit("DataProiectNou.txt");
     string nume;
     QString qtnume,qtdata;
     qtnume = ui->lineEdit_nume->text();
     int nr_indicatori=ui->spinBox_indicatori->value();
     nume =qtnume.toStdString();
     cout<<nume;
-    ofstream fout("C:/Users/user/Desktop/An II ACS/ProiectVar5/ProiectNOU9/Nume.txt");
+    ofstream fout("Nume.txt");
        fout<<nume<<",";
     fout.close();
     //data initiala

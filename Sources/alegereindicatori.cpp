@@ -43,12 +43,12 @@ void AlegereIndicatori::on_pushButton_clicked()
         hide();
         alegeretaskuri=new AlegereTaskuri(this,indicatori1,nr_indicatori);
         alegeretaskuri->show();}
-    ofstream indicatori("C:/Users/user/Desktop/An II ACS/ProiectVar5/ProiectNOU9/Indicatori.txt");
+    ofstream indicatori("Indicatori.txt");
     indicatori<<nr_indicatori<<endl;
     for(int i=0;i<nr_indicatori;i++)
         indicatori<<indicatori1[i]<<endl;
     indicatori.close();
-//    ofstream indicatorirezultate("D:/Facultate/Anul 2/Sem 1/ProiectNOU9/Indicatorirezultate.txt");
+//    ofstream indicatorirezultate("Indicatorirezultate.txt");
 //    indicatorirezultate<<nr_indicatori<<endl;
 //    for(int i=0;i<nr_indicatori;i++)
 //        indicatorirezultate<<0<<endl;
